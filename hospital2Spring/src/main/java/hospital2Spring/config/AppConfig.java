@@ -16,6 +16,7 @@ import hospital2Spring.model.service.impl.NoteServiceImpl;
 import hospital2Spring.model.service.impl.PatientServiceImpl;
 import hospital2Spring.model.service.impl.UserServiceImpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -25,9 +26,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class AppConfig {
 	
+	@Autowired
 	UserRepository userRepository;
+	@Autowired
 	PatientRepository patientRepository;
+	@Autowired
 	DiagnosisRepository diagnosisRepository;
+	@Autowired
 	NoteRepository noteRepository;
 	
 	@Bean 

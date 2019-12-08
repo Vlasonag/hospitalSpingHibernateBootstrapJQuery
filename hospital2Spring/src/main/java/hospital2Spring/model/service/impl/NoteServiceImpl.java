@@ -1,6 +1,7 @@
 package hospital2Spring.model.service.impl;
 
-import java.util.List; 
+import java.util.List;  
+
 
 import hospital2Spring.model.entity.Note;
 import hospital2Spring.model.entity.Patient;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class NoteServiceImpl implements NoteService{
 	@Autowired
 	NoteRepository noteRepository;
+	
 	
 	public NoteServiceImpl(NoteRepository noteRepository) {
 		this.noteRepository = noteRepository;

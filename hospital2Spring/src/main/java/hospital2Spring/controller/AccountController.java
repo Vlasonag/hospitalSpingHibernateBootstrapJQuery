@@ -1,16 +1,8 @@
 package hospital2Spring.controller;
 
-
-
-import hospital2Spring.model.service.DiagnosisService;
-import hospital2Spring.model.service.NoteService;
-import hospital2Spring.model.service.PatientService;
-import hospital2Spring.model.service.UserService;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,20 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AccountController  implements ErrorController{
-	
-	@Autowired
-	UserService userService;
-	PatientService patientService;
-	DiagnosisService diagnosisService;
-	NoteService noteService;
-	
-	public AccountController(UserService userService, PatientService patientService, 
-			DiagnosisService diagnosisService, NoteService noteService) {
-		this.userService = userService;
-		this.patientService = patientService;
-		this.diagnosisService = diagnosisService;
-		this.noteService = noteService;
-	}
 	
 	@RequestMapping(value = "/", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView startPage(HttpServletRequest request) {
@@ -59,8 +37,7 @@ public class AccountController  implements ErrorController{
 	@PreAuthorize("isAuthenticated()")
 	public ModelAndView journalPage(HttpServletRequest request) {
 		
-		ModelAndView mav = new ModelAndView("journal_page");
-		mav.addObject("currentPage", 1);
+		ModelAndView mav = new ModelAndView("journal_page");	
 		return mav;
 	}
 	

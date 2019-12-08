@@ -23,14 +23,11 @@
 			<input id="room" name="room" required pattern="^[ 0-9]+$" type="text" class="form-control" value="${room}" id="exampleFormControlInput1" >
 			<label for="exampleFormControlInput1"><fmt:message key="Name"/></label>
 			<input id="name" name="name" required type="text" class="form-control" value="${name}" id="exampleFormControlInput1" >
-			<label for="exampleFormControlInput1"><fmt:message key="Name"/></label>   
+			<label for="exampleFormControlInput1"><fmt:message key="Surname"/></label>   
 			<input id="surname" name="surname" required type="text" class="form-control" value="${surname}" id="exampleFormControlInput1" >
 			<br>
 		<button onclick="get()"><fmt:message key="sort"/> ↓/↑</button> <br><br>
 		<p id="demo"></p>
-		
-		
-		
 	</div>
 	
 	<script type="text/javascript">
@@ -50,7 +47,7 @@ function findAll() {
         		str += "<div  style=\"width: 400px;\" class=\"alert alert-danger\" role=\"alert\">";
         		str += "Note id = " + data[i].note_id + "<br/>"; 
         		str += "Worker: " + data[i].worker_surname + " " + data[i].worker_name + ", id = " + data[i].worker_id + "<br/>";
-        		str += "Patient:" + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
+        		str += "Patient: " + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
         		str += "Procedures: " + data[i].procedures + "<br/>";
         		str += "Medicines: " + data[i].medicines + "<br/>";
         		str += "Operation: " + data[i].operation + "<br/>";
@@ -83,7 +80,7 @@ function findMy() {
         		str += "<div  style=\"width: 400px;\" class=\"alert alert-danger\" role=\"alert\">";
         		str += "Note id = " + data[i].note_id + "<br/>"; 
         		str += "Worker: " + data[i].worker_surname + " " + data[i].worker_name + ", id = " + data[i].worker_id + "<br/>";
-        		str += "Patient:" + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
+        		str += "Patient: " + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
         		str += "Procedures: " + data[i].procedures + "<br/>";
         		str += "Medicines: " + data[i].medicines + "<br/>";
         		str += "Operation: " + data[i].operation + "<br/>";
@@ -121,7 +118,7 @@ function myFunctionSearch() {
         		str += "<div  style=\"width: 400px;\" class=\"alert alert-danger\" role=\"alert\">";
         		str += "Note id = " + data[i].note_id + "<br/>"; 
         		str += "Worker: " + data[i].worker_surname + " " + data[i].worker_name + ", id = " + data[i].worker_id + "<br/>";
-        		str += "Patient:" + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
+        		str += "Patient: " + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
         		str += "Procedures: " + data[i].procedures + "<br/>";
         		str += "Medicines: " + data[i].medicines + "<br/>";
         		str += "Operation: " + data[i].operation + "<br/>";
@@ -155,7 +152,7 @@ function get() {
         		str += "<div  style=\"width: 400px;\" class=\"alert alert-danger\" role=\"alert\">";
         		str += "Note id = " + data[i].note_id + "<br/>"; 
         		str += "Worker: " + data[i].worker_surname + " " + data[i].worker_name + ", id = " + data[i].worker_id + "<br/>";
-        		str += "Patient:" + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
+        		str += "Patient: " + data[i].patient_surname + " " + data[i].patient_name + ", room = " + data[i].room + "<br/>";
         		str += "Procedures: " + data[i].procedures + "<br/>";
         		str += "Medicines: " + data[i].medicines + "<br/>";
         		str += "Operation: " + data[i].operation + "<br/>";

@@ -14,7 +14,7 @@
 </head>
 <body >
 	<jsp:include page="header.jsp" />
-	<h1 style="padding-left: 250px; padding-top: 200px"><fmt:message key="Error_403_access_denied"/><a href="logout"><fmt:message key="enter"/></a> <fmt:message key="system_as_an_another_worker"/></h1>
+	<h1 style="padding-left: 250px; padding-top: 200px"><fmt:message key="Error_403_access_denied"/><a href="/logout"><fmt:message key="enter"/></a> <fmt:message key="system_as_an_another_worker"/></h1>
 	
 </body>
 </html>

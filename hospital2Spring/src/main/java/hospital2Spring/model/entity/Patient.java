@@ -144,18 +144,12 @@ public class Patient {
 				+ ", surname=" + surname + ", inHospital=" + inHospital
 				+ "]";
 	}
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((diagnosis == null) ? 0 : diagnosis.hashCode());
-		result = prime * result + ((doctor == null) ? 0 : doctor.hashCode());
 		result = prime * result + id;
 		result = prime * result + inHospital;
-		result = prime * result
-				+ ((listOfWorkers == null) ? 0 : listOfWorkers.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + room;
 		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
@@ -170,24 +164,9 @@ public class Patient {
 		if (getClass() != obj.getClass())
 			return false;
 		Patient other = (Patient) obj;
-		if (diagnosis == null) {
-			if (other.diagnosis != null)
-				return false;
-		} else if (!diagnosis.equals(other.diagnosis))
-			return false;
-		if (doctor == null) {
-			if (other.doctor != null)
-				return false;
-		} else if (!doctor.equals(other.doctor))
-			return false;
 		if (id != other.id)
 			return false;
 		if (inHospital != other.inHospital)
-			return false;
-		if (listOfWorkers == null) {
-			if (other.listOfWorkers != null)
-				return false;
-		} else if (!listOfWorkers.equals(other.listOfWorkers))
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -203,5 +182,7 @@ public class Patient {
 			return false;
 		return true;
 	}
+	
+	
 	
 }

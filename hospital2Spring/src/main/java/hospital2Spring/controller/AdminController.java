@@ -1,10 +1,9 @@
 package hospital2Spring.controller;
 
-import java.util.List;
+import java.util.List; 
 
 import hospital2Spring.model.entity.Patient;
 import hospital2Spring.model.entity.User;
-import hospital2Spring.model.service.DiagnosisService;
 import hospital2Spring.model.service.PatientService;
 import hospital2Spring.model.service.UserService;
 
@@ -25,13 +24,12 @@ public class AdminController {
 	
 	@Autowired
 	UserService userService;
+	@Autowired
 	PatientService patientService;
-	DiagnosisService diagnosisService;
 	
-	public AdminController(UserService userService, PatientService patientService, DiagnosisService diagnosisService) {
+	public AdminController(UserService userService, PatientService patientService) {
 		this.userService = userService;
 		this.patientService = patientService;
-		this.diagnosisService = diagnosisService;
 	}
 	
 	@RequestMapping(value = "/change_doctor", method = {RequestMethod.POST, RequestMethod.GET})

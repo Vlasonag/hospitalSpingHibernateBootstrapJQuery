@@ -23,4 +23,6 @@ public interface NoteRepository extends JpaRepository<Note, Integer>{
 			  nativeQuery = true)
 	void saveRelation(@Param("patient_id")int patient_id, @Param("user_id")int user_id);
 	
+	
+	
 }

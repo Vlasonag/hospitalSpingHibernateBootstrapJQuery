@@ -93,6 +93,39 @@ public class Note {
 		return "Note [id=" + id + ", commentary=" + commentary + ", date="
 				+ date + ", diagnosis=" + diagnosis + ", user=" + user + "]";
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((commentary == null) ? 0 : commentary.hashCode());
+		result = prime * result + ((date == null) ? 0 : date.hashCode());
+		result = prime * result + id;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Note other = (Note) obj;
+		if (commentary == null) {
+			if (other.commentary != null)
+				return false;
+		} else if (!commentary.equals(other.commentary))
+			return false;
+		if (date == null) {
+			if (other.date != null)
+				return false;
+		} else if (!date.equals(other.date))
+			return false;
+		if (id != other.id)
+			return false;
+		return true;
+	}
 	
 	
 }

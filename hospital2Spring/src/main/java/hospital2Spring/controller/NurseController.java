@@ -29,7 +29,9 @@ public class NurseController {
 	
 	@Autowired
 	UserService userService;
+	@Autowired
 	PatientService patientService;
+	@Autowired
 	NoteService noteService;
 	
 	public NurseController(UserService userService, PatientService patientService, 

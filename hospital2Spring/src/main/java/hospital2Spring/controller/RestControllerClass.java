@@ -34,19 +34,18 @@ public class RestControllerClass {
 	
 	@Autowired
 	UserService userService;
+	@Autowired
 	PatientService patientService;
-	DiagnosisService diagnosisService;
+	@Autowired
 	NoteService noteService;
 	
 	List<NoteDTO> currentList;
 	int sorted = 0;
 	
 	
-	public RestControllerClass(UserService userService, PatientService patientService, 
-			DiagnosisService diagnosisService, NoteService noteService) {
+	public RestControllerClass(UserService userService, PatientService patientService, NoteService noteService) {
 		this.userService = userService;
 		this.patientService = patientService;
-		this.diagnosisService = diagnosisService;
 		this.noteService = noteService;
 	}
 	

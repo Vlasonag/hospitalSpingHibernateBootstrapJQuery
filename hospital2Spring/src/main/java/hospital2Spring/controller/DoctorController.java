@@ -33,16 +33,17 @@ public class DoctorController {
 	
 	@Autowired
 	UserService userService;
+	@Autowired
 	PatientService patientService;
-	DiagnosisService diagnosisService;
+	@Autowired
 	NoteService noteService;
+	@Autowired
 	MakeFindEditDiagnosisService makeFindEditDiagnosisService;
 	
-	public DoctorController(UserService userService, PatientService patientService, DiagnosisService diagnosisService, 
-			MakeFindEditDiagnosisService makeFindEditDiagnosisService, NoteService noteService) {
+	public DoctorController(UserService userService, PatientService patientService, 
+							MakeFindEditDiagnosisService makeFindEditDiagnosisService, NoteService noteService) {
 		this.userService = userService;
 		this.patientService = patientService;
-		this.diagnosisService = diagnosisService;
 		this.noteService = noteService;
 		this.makeFindEditDiagnosisService = makeFindEditDiagnosisService;
 	}
@@ -51,7 +52,8 @@ public class DoctorController {
 	public ModelAndView makeDiagnosis(HttpServletRequest request, @RequestParam int room, @RequestParam String name, 
 										@RequestParam String surname, @RequestParam String description, 
 										@RequestParam String conclusion, @RequestParam String procedures, 
-										@RequestParam String medicines, @RequestParam String operation, Authentication authentication) {
+										@RequestParam String medicines, @RequestParam String operation,
+										Authentication authentication) {
 		
 		ModelAndView mav;
 		Patient patient = new Patient(room, name, surname);

@@ -1,6 +1,5 @@
 package hospital2Spring;
-
-import hospital2Spring.model.entity.Patient;
+ 
 import hospital2Spring.model.entity.User;
 import hospital2Spring.model.repository.UserRepository;
 import hospital2Spring.model.service.impl.UserServiceImpl;

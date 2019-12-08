@@ -136,6 +136,67 @@ public class Diagnosis {
 	public void setListOfJournals(List<Note> listOfJournals) {
 		this.listOfJournals = listOfJournals;
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((conclusion == null) ? 0 : conclusion.hashCode());
+		result = prime * result
+				+ ((description == null) ? 0 : description.hashCode());
+		result = prime * result + id;
+		result = prime * result
+				+ ((medicines == null) ? 0 : medicines.hashCode());
+		result = prime * result
+				+ ((operations == null) ? 0 : operations.hashCode());
+		result = prime * result + ((patient == null) ? 0 : patient.hashCode());
+		result = prime * result
+				+ ((procedures == null) ? 0 : procedures.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Diagnosis other = (Diagnosis) obj;
+		if (conclusion == null) {
+			if (other.conclusion != null)
+				return false;
+		} else if (!conclusion.equals(other.conclusion))
+			return false;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (id != other.id)
+			return false;
+		if (medicines == null) {
+			if (other.medicines != null)
+				return false;
+		} else if (!medicines.equals(other.medicines))
+			return false;
+		if (operations == null) {
+			if (other.operations != null)
+				return false;
+		} else if (!operations.equals(other.operations))
+			return false;
+		if (patient == null) {
+			if (other.patient != null)
+				return false;
+		} else if (!patient.equals(other.patient))
+			return false;
+		if (procedures == null) {
+			if (other.procedures != null)
+				return false;
+		} else if (!procedures.equals(other.procedures))
+			return false;
+		return true;
+	}
 	
 	
 	
