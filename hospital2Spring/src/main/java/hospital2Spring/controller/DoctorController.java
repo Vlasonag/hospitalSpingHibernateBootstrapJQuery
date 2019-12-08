@@ -92,7 +92,6 @@ public class DoctorController {
 		return mav;
 	}
 	
-	
 	@RequestMapping(value = "/diagnosis/edit", method = {RequestMethod.POST, RequestMethod.GET})
 	@ResponseBody
 	public ModelAndView editDiagnosis(HttpServletRequest request, @RequestParam String description, 
@@ -132,6 +131,7 @@ public class DoctorController {
 		mav = new ModelAndView("operations_page");
 		return mav;
 	}
+	
 	@RequestMapping(value = "/operations/find", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView operationsFind(HttpServletRequest request, @RequestParam int room, @RequestParam String name, 
 											@RequestParam String surname, Authentication authentication) {
@@ -152,6 +152,7 @@ public class DoctorController {
 		mav.addObject("diagnosis", patient.getDiagnosis());
 		return mav;
 	}
+	
 	@RequestMapping(value = "/operations/find/note", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView operationsNote(HttpServletRequest request, @RequestParam String commentary, Authentication auth) {
 		
